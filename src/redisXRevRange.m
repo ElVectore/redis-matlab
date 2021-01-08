@@ -31,6 +31,8 @@ a = strfind(Response, "*2");
 
 arr_timestamp = Response(a(1):a(2)-1);
 arr_msg = Response(a(2):length(Response));
+% length(arr_timestamp)
+% length(arr_msg)
 
 cell_timestamp = redisParseBulkReply(arr_timestamp);
 Timestamp = cell_timestamp{1};

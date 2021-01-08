@@ -10,6 +10,7 @@ end
 
 [Response, R, S] = redisCommand(R, redisCommandString(sprintf('GET %s', key)));
 
+
 if Response(1) == '-'
   S = Response;
   return
